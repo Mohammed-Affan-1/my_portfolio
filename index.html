@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammed Affan JA | Cybersecurity Portfolio</title>
+  <meta name="description" content="Mohammed Affan JA - Cybersecurity Student, Ethical Hacker, Penetration Tester and Network Security Enthusiast. Explore my projects, skills, and certifications." />
+  <meta name="keywords" content="Mohammed Affan, cybersecurity, ethical hacking, penetration testing, CTF, portfolio" />
+  <meta name="author" content="Mohammed Affan JA" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Matrix Rain Canvas -->
+  <canvas id="matrixCanvas"></canvas>
+
+  <!-- Cursor Glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">[</span>
+        <span class="logo-text">AFFAN</span>
+        <span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#certifications" class="nav-link" data-section="certifications">Certs</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO SECTION ═══════════ -->
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Available for Internships & Opportunities</span>
+      </div>
+      <div class="hero-greeting">
+        <span class="terminal-prompt">$ whoami</span>
+      </div>
+      <h1 class="hero-name">
+        <span class="name-line1">Mohammed</span>
+        <span class="name-line2">Affan <span class="name-accent">JA</span></span>
+      </h1>
+      <div class="hero-roles">
+        <span class="role-label">root@kali:~# </span>
+        <span class="role-text" id="typingText"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-intro">
+        Passionate Computer Science and Engineering <strong>(Cyber Security)</strong> student with a strong interest in 
+        <span class="highlight">ethical hacking</span>, <span class="highlight">penetration testing</span>, 
+        <span class="highlight">network security</span>, and vulnerability assessment. I enjoy solving real-world 
+        cybersecurity challenges through CTFs, hands-on labs, and security research.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-target="4">0</span>+
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="5">0</span>+
+          <span class="stat-label">Certifications</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="6">0</span>+
+          <span class="stat-label">Platforms</span>
+        </div>
+      </div>
+      <div class="hero-buttons">
+        <a href="assets/resume.pdf" download class="btn btn-primary" id="downloadResume">
+          <i class="fas fa-file-download"></i>
+          <span>Download Resume</span>
+        </a>
+        <a href="#projects" class="btn btn-secondary" id="viewProjects">
+          <i class="fas fa-code"></i>
+          <span>View Projects</span>
+        </a>
+        <a href="#contact" class="btn btn-outline" id="contactMe">
+          <i class="fas fa-terminal"></i>
+          <span>Contact Me</span>
+        </a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/Mohammed-Affan-1" target="_blank" class="social-link" id="heroGithub" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/mohammedaffanjacyber" target="_blank" class="social-link" id="heroLinkedin" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:affanmohammedaffan0@gmail.com" class="social-link" id="heroEmail" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="avatar-container">
+        <div class="avatar-ring ring-1"></div>
+        <div class="avatar-ring ring-2"></div>
+        <div class="avatar-ring ring-3"></div>
+        <div class="avatar-img-wrapper">
+          <img src="assets/avatar.png" alt="Mohammed Affan JA" class="avatar-img" id="heroAvatar" />
+        </div>
+        <div class="avatar-badge shield"><i class="fas fa-shield-alt"></i></div>
+        <div class="avatar-badge bug"><i class="fas fa-bug"></i></div>
+        <div class="avatar-badge network"><i class="fas fa-network-wired"></i></div>
+        <div class="avatar-badge key"><i class="fas fa-key"></i></div>
+      </div>
+      <div class="terminal-widget">
+        <div class="terminal-header">
+          <span class="t-dot t-red"></span>
+          <span class="t-dot t-yellow"></span>
+          <span class="t-dot t-green"></span>
+          <span class="t-title">affan@kali:~</span>
+        </div>
+        <div class="terminal-body" id="terminalBody">
+          <div class="t-line"><span class="t-prompt">$</span> nmap -sV target</div>
+          <div class="t-line"><span class="t-out">Starting Nmap scan...</span></div>
+          <div class="t-line"><span class="t-out">PORT&nbsp;&nbsp; STATE SERVICE</span></div>
+          <div class="t-line"><span class="t-out">22/tcp open&nbsp; ssh</span></div>
+          <div class="t-line"><span class="t-out">80/tcp open&nbsp; http</span></div>
+          <div class="t-line"><span class="t-prompt">$</span> <span class="t-cursor">_</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ABOUT SECTION ═══════════ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 01</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <p class="section-subtitle">Who I am & what drives me</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="about-card glass-card">
+            <p class="about-intro">
+              Hello! I'm <strong class="accent">Mohammed Affan JA</strong>, a Cyber Security student at 
+              <strong>Nandha Engineering College</strong>. I enjoy learning how attackers exploit systems 
+              and how security professionals defend them.
+            </p>
+            <p>
+              My journey into cybersecurity started with curiosity about how digital systems work beneath the surface. 
+              I continuously improve my skills through platforms like Hack The Box, TryHackMe, and PortSwigger.
+            </p>
+            <div class="interests-grid">
+              <div class="interest-item" id="interest1">
+                <i class="fas fa-user-secret"></i>
+                <span>Ethical Hacking</span>
+              </div>
+              <div class="interest-item" id="interest2">
+                <i class="fas fa-crosshairs"></i>
+                <span>Penetration Testing</span>
+              </div>
+              <div class="interest-item" id="interest3">
+                <i class="fas fa-globe"></i>
+                <span>Web Security</span>
+              </div>
+              <div class="interest-item" id="interest4">
+                <i class="fas fa-network-wired"></i>
+                <span>Network Security</span>
+              </div>
+              <div class="interest-item" id="interest5">
+                <i class="fas fa-search"></i>
+                <span>Vulnerability Assessment</span>
+              </div>
+              <div class="interest-item" id="interest6">
+                <i class="fas fa-chess-rook"></i>
+                <span>Red Teaming</span>
+              </div>
+              <div class="interest-item" id="interest7">
+                <i class="fas fa-flag"></i>
+                <span>CTF Challenges</span>
+              </div>
+              <div class="interest-item" id="interest8">
+                <i class="fas fa-eye"></i>
+                <span>OSINT</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-platforms">
+          <div class="platform-card glass-card" id="platform-htb">
+            <div class="platform-icon htb"><i class="fas fa-cube"></i></div>
+            <div class="platform-info">
+              <h4>Hack The Box</h4>
+              <p>Active machine solver & challenge participant</p>
+            </div>
+            <div class="platform-status active">Active</div>
+          </div>
+          <div class="platform-card glass-card" id="platform-thm">
+            <div class="platform-icon thm"><i class="fas fa-shield-halved"></i></div>
+            <div class="platform-info">
+              <h4>TryHackMe</h4>
+              <p>Learning paths & room completions</p>
+            </div>
+            <div class="platform-status active">Active</div>
+          </div>
+          <div class="platform-card glass-card" id="platform-cisco">
+            <div class="platform-icon cisco"><i class="fas fa-server"></i></div>
+            <div class="platform-info">
+              <h4>Cisco NetAcad</h4>
+              <p>Networking & security coursework</p>
+            </div>
+            <div class="platform-status done">Certified</div>
+          </div>
+          <div class="platform-card glass-card" id="platform-portswigger">
+            <div class="platform-icon port"><i class="fas fa-spider"></i></div>
+            <div class="platform-info">
+              <h4>PortSwigger Academy</h4>
+              <p>Web application security labs</p>
+            </div>
+            <div class="platform-status active">Active</div>
+          </div>
+          <div class="platform-card glass-card" id="platform-overthewire">
+            <div class="platform-icon otw"><i class="fas fa-terminal"></i></div>
+            <div class="platform-info">
+              <h4>OverTheWire</h4>
+              <p>Wargames & Linux security</p>
+            </div>
+            <div class="platform-status active">Active</div>
+          </div>
+          <div class="platform-card glass-card" id="platform-picoctf">
+            <div class="platform-icon pico"><i class="fas fa-flag"></i></div>
+            <div class="platform-info">
+              <h4>PicoCTF</h4>
+              <p>CTF competitions & write-ups</p>
+            </div>
+            <div class="platform-status active">Active</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ EDUCATION SECTION ═══════════ -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 02</span>
+        <h2 class="section-title">My <span class="accent">Education</span></h2>
+        <p class="section-subtitle">Academic background & relevant coursework</p>
+      </div>
+      <div class="education-layout">
+        <div class="edu-card glass-card main-edu" id="educationCard">
+          <div class="edu-header">
+            <div class="edu-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="edu-title">
+              <h3>B.E. Computer Science & Engineering</h3>
+              <span class="edu-specialization">(Cyber Security)</span>
+            </div>
+            <div class="edu-status">
+              <span class="status-badge">2024 – Present</span>
+            </div>
+          </div>
+          <div class="edu-body">
+            <div class="edu-info-grid">
+              <div class="edu-info-item">
+                <i class="fas fa-university"></i>
+                <div>
+                  <span class="info-label">College</span>
+                  <span class="info-value">Nandha Engineering College (Autonomous), Erode</span>
+                </div>
+              </div>
+              <div class="edu-info-item">
+                <i class="fas fa-landmark"></i>
+                <div>
+                  <span class="info-label">University</span>
+                  <span class="info-value">Anna University</span>
+                </div>
+              </div>
+            </div>
+            <div class="coursework">
+              <h4 class="coursework-title"><i class="fas fa-book-open"></i> Relevant Subjects</h4>
+              <div class="course-tags">
+                <span class="course-tag">Computer Networks</span>
+                <span class="course-tag">Cryptography</span>
+                <span class="course-tag">Ethical Hacking</span>
+                <span class="course-tag">Secure Software Engineering</span>
+                <span class="course-tag">Operating Systems</span>
+                <span class="course-tag">Database Management Systems</span>
+                <span class="course-tag">Linux Administration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SKILLS SECTION ═══════════ -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 03</span>
+        <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
+        <p class="section-subtitle">Tools, technologies & expertise</p>
+      </div>
+      <div class="skills-tabs">
+        <button class="skill-tab active" data-tab="languages" id="tabLanguages">
+          <i class="fas fa-code"></i> Languages
+        </button>
+        <button class="skill-tab" data-tab="cybersecurity" id="tabCybersecurity">
+          <i class="fas fa-shield-alt"></i> Cybersecurity
+        </button>
+        <button class="skill-tab" data-tab="tools" id="tabTools">
+          <i class="fas fa-tools"></i> Security Tools
+        </button>
+        <button class="skill-tab" data-tab="networking" id="tabNetworking">
+          <i class="fas fa-network-wired"></i> Networking
+        </button>
+        <button class="skill-tab" data-tab="other" id="tabOther">
+          <i class="fas fa-layer-group"></i> Other
+        </button>
+      </div>
+      <div class="skills-content">
+        <div class="tab-pane active" id="tab-languages">
+          <div class="skills-grid">
+            <div class="skill-card glass-card" id="skill-java">
+              <div class="skill-icon"><i class="fab fa-java"></i></div>
+              <div class="skill-name">Java</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-python">
+              <div class="skill-icon"><i class="fab fa-python"></i></div>
+              <div class="skill-name">Python</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-sql">
+              <div class="skill-icon"><i class="fas fa-database"></i></div>
+              <div class="skill-name">SQL</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-html">
+              <div class="skill-icon"><i class="fab fa-html5"></i></div>
+              <div class="skill-name">HTML</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-css">
+              <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+              <div class="skill-name">CSS</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-js">
+              <div class="skill-icon"><i class="fab fa-js"></i></div>
+              <div class="skill-name">JavaScript</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+              <span class="skill-level">Basic</span>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="tab-cybersecurity">
+          <div class="skills-grid">
+            <div class="skill-card glass-card" id="skill-webapp">
+              <div class="skill-icon"><i class="fas fa-globe-americas"></i></div>
+              <div class="skill-name">Web App Security</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-va">
+              <div class="skill-icon"><i class="fas fa-search-plus"></i></div>
+              <div class="skill-name">Vulnerability Assessment</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-pentest">
+              <div class="skill-icon"><i class="fas fa-crosshairs"></i></div>
+              <div class="skill-name">Penetration Testing</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-netsec">
+              <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+              <div class="skill-name">Network Security</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-osint">
+              <div class="skill-icon"><i class="fas fa-binoculars"></i></div>
+              <div class="skill-name">OSINT</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-passsec">
+              <div class="skill-icon"><i class="fas fa-lock"></i></div>
+              <div class="skill-name">Password Security</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="76"></div></div>
+              <span class="skill-level">Intermediate</span>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="tab-tools">
+          <div class="tools-grid">
+            <div class="tool-badge" id="tool-kali"><i class="fas fa-dragon"></i> Kali Linux</div>
+            <div class="tool-badge" id="tool-parrot"><i class="fas fa-feather-alt"></i> Parrot OS</div>
+            <div class="tool-badge" id="tool-nmap"><i class="fas fa-radar"></i> Nmap</div>
+            <div class="tool-badge" id="tool-wireshark"><i class="fas fa-water"></i> Wireshark</div>
+            <div class="tool-badge" id="tool-burp"><i class="fas fa-spider"></i> Burp Suite</div>
+            <div class="tool-badge" id="tool-metasploit"><i class="fas fa-meteor"></i> Metasploit</div>
+            <div class="tool-badge" id="tool-sqlmap"><i class="fas fa-syringe"></i> SQLMap</div>
+            <div class="tool-badge" id="tool-maltego"><i class="fas fa-project-diagram"></i> Maltego</div>
+            <div class="tool-badge" id="tool-spiderfoot"><i class="fas fa-spider"></i> SpiderFoot</div>
+            <div class="tool-badge" id="tool-wafw00f"><i class="fas fa-fire-flame-curved"></i> WAFW00F</div>
+            <div class="tool-badge" id="tool-sn1per"><i class="fas fa-crosshairs"></i> Sn1per</div>
+            <div class="tool-badge" id="tool-hydra"><i class="fas fa-key"></i> Hydra</div>
+            <div class="tool-badge" id="tool-john"><i class="fas fa-unlock"></i> John the Ripper</div>
+            <div class="tool-badge" id="tool-git"><i class="fab fa-git-alt"></i> Git</div>
+            <div class="tool-badge" id="tool-github"><i class="fab fa-github"></i> GitHub</div>
+            <div class="tool-badge" id="tool-mysql"><i class="fas fa-database"></i> MySQL</div>
+          </div>
+        </div>
+        <div class="tab-pane" id="tab-networking">
+          <div class="skills-grid">
+            <div class="skill-card glass-card" id="skill-tcpip">
+              <div class="skill-icon"><i class="fas fa-exchange-alt"></i></div>
+              <div class="skill-name">TCP/IP</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-dns">
+              <div class="skill-icon"><i class="fas fa-sitemap"></i></div>
+              <div class="skill-name">DNS</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-http">
+              <div class="skill-icon"><i class="fas fa-globe"></i></div>
+              <div class="skill-name">HTTP/HTTPS</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-ssh">
+              <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+              <div class="skill-name">SSH / FTP</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-routing">
+              <div class="skill-icon"><i class="fas fa-route"></i></div>
+              <div class="skill-name">Routing & Switching</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-linux-sec">
+              <div class="skill-icon"><i class="fab fa-linux"></i></div>
+              <div class="skill-name">Linux Security</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              <span class="skill-level">Advanced</span>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="tab-other">
+          <div class="skills-grid">
+            <div class="skill-card glass-card" id="skill-springboot">
+              <div class="skill-icon"><i class="fas fa-leaf"></i></div>
+              <div class="skill-name">Spring Boot</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-docker">
+              <div class="skill-icon"><i class="fab fa-docker"></i></div>
+              <div class="skill-name">Docker</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-mysql2">
+              <div class="skill-icon"><i class="fas fa-database"></i></div>
+              <div class="skill-name">MySQL</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-ollama">
+              <div class="skill-icon"><i class="fas fa-robot"></i></div>
+              <div class="skill-name">Ollama / AI</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="68"></div></div>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-maven">
+              <div class="skill-icon"><i class="fas fa-box"></i></div>
+              <div class="skill-name">Maven</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-card glass-card" id="skill-blockchain">
+              <div class="skill-icon"><i class="fas fa-link"></i></div>
+              <div class="skill-name">Blockchain Basics</div>
+              <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+              <span class="skill-level">Basic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PROJECTS SECTION ═══════════ -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 04</span>
+        <h2 class="section-title">My <span class="accent">Projects</span></h2>
+        <p class="section-subtitle">Real-world cybersecurity solutions I've built</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Project 1: Trust Decay Calculator -->
+        <div class="project-card glass-card" id="project-trust">
+          <div class="project-header">
+            <div class="project-icon trust-icon">
+              <i class="fas fa-shield-virus"></i>
+            </div>
+            <div class="project-badges">
+              <span class="proj-badge">Zero Trust</span>
+              <span class="proj-badge">Security</span>
+            </div>
+          </div>
+          <h3 class="project-title">Trust Decay Calculator</h3>
+          <p class="project-desc">
+            A Zero Trust security prototype that dynamically evaluates employee trust scores based on system activities, 
+            featuring blockchain-based audit logs and automatic account locking.
+          </p>
+          <div class="project-features">
+            <span class="feature-tag"><i class="fas fa-check-circle"></i> Zero Trust Auth</span>
+            <span class="feature-tag"><i class="fas fa-check-circle"></i> Trust Score Calc</span>
+            <span class="feature-tag"><i class="fas fa-check-circle"></i> Blockchain Logs</span>
+            <span class="feature-tag"><i class="fas fa-check-circle"></i> Auto Account Lock</span>
+            <span class="feature-tag"><i class="fas fa-check-circle"></i> Admin Verification</span>
+          </div>
+          <div class="project-tech">
+            <span class="tech-chip">Java</span>
+            <span class="tech-chip">Spring Boot</span>
+            <span class="tech-chip">MySQL</span>
+            <span class="tech-chip">Docker</span>
+            <span class="tech-chip">Maven</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Mohammed-Affan-1" target="_blank" class="proj-link" id="trustGithub">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: Ghost AI -->
+        <div class="project-card glass-card featured" id="project-ghostai">
+          <div class="project-badge-featured">Featured</div>
+          <div class="project-header">
+            <div class="project-icon ghost-icon">
+              <i class="fas fa-ghost"></i>
+            </div>
+            <div class="project-badges">
+              <span class="proj-badge">AI</span>
+              <span class="proj-badge">Local LLM</span>
+            </div>
+          </div>
+          <h3 class="project-title">Ghost AI</h3>
+          <p class="project-desc">
+            A local AI cybersecurity assistant powered by TinyLlama that helps users learn cybersecurity concepts 
+            and automate security-related tasks — completely offline, privacy-first.
+          </p>
+          <div class="project-features">
+            <span class="feature-tag"><i class="fas fa-check-circle"></i> Local AI (No Cloud)</span>
+            <span class="feature-tag"><i class="fas fa-check-circle"></i> Cybersecurity Chatbot</span>
+            <span class="feature-tag"><i class="fas fa-check-circle"></i> Knowledge Base</span>
+            <span class="feature-tag"><i class="fas fa-check-circle"></i> Voice (Planned)</span>
+          </div>
+          <div class="project-tech">
+            <span class="tech-chip">Python</span>
+            <span class="tech-chip">Ollama</span>
+            <span class="tech-chip">TinyLlama</span>
+            <span class="tech-chip">SQL</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Mohammed-Affan-1" target="_blank" class="proj-link" id="ghostGithub">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: SQL Injection Traffic Analysis -->
+        <div class="project-card glass-card" id="project-sqli">
+          <div class="project-header">
+            <div class="project-icon sqli-icon">
+              <i class="fas fa-syringe"></i>
+            </div>
+            <div class="project-badges">
+              <span class="proj-badge">Research</span>
+              <span class="proj-badge">Analysis</span>
+            </div>
+          </div>
+          <h3 class="project-title">SQL Injection Traffic Analysis</h3>
+          <p class="project-desc">
+            A research project analyzing SQL Injection attack traffic to understand attacker techniques and improve 
+            detection strategies through HTTP traffic capture and payload analysis.
+          </p>
+          <div class="project-features">
+            <span class="feature-tag"><i class="fas fa-check-circle"></i> HTTP Traffic Capture</span>
+            <span class="feature-tag"><i class="fas fa-check-circle"></i> Payload Analysis</span>
+            <span class="feature-tag"><i class="fas fa-check-circle"></i> Attack Pattern Study</span>
+            <span class="feature-tag"><i class="fas fa-check-circle"></i> Security Report</span>
+          </div>
+          <div class="project-tech">
+            <span class="tech-chip">Wireshark</span>
+            <span class="tech-chip">Burp Suite</span>
+            <span class="tech-chip">Kali Linux</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Mohammed-Affan-1" target="_blank" class="proj-link" id="sqliGithub">
+              <i class="fab fa-github"></i> View Research
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4: SSM Solar Billing System -->
+        <div class="project-card glass-card" id="project-ssm">
+          <div class="project-header">
+            <div class="project-icon ssm-icon">
+              <i class="fas fa-solar-panel"></i>
+            </div>
+            <div class="project-badges">
+              <span class="proj-badge">Web App</span>
+              <span class="proj-badge">Billing</span>
+            </div>
+          </div>
+          <h3 class="project-title">SSM Solar Billing System</h3>
+          <p class="project-desc">
+            A web-based billing management system for a solar equipment business, handling product management, 
+            customer records, and automated invoice generation with sales reporting.
+          </p>
+          <div class="project-features">
+            <span class="feature-tag"><i class="fas fa-check-circle"></i> Invoice Generation</span>
+            <span class="feature-tag"><i class="fas fa-check-circle"></i> Product Management</span>
+            <span class="feature-tag"><i class="fas fa-check-circle"></i> Customer Management</span>
+            <span class="feature-tag"><i class="fas fa-check-circle"></i> Sales Reports</span>
+          </div>
+          <div class="project-tech">
+            <span class="tech-chip">Java</span>
+            <span class="tech-chip">MySQL</span>
+            <span class="tech-chip">HTML</span>
+            <span class="tech-chip">CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Mohammed-Affan-1" target="_blank" class="proj-link" id="ssmGithub">
+              <i class="fab fa-github"></i> View Code
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CERTIFICATIONS SECTION ═══════════ -->
+  <section id="certifications" class="section certs-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 05</span>
+        <h2 class="section-title">Certifications & <span class="accent">Credentials</span></h2>
+        <p class="section-subtitle">Verified learning achievements — click any certificate to view</p>
+      </div>
+
+      <!-- Certificate Cards Grid -->
+      <div class="certs-showcase-grid">
+
+        <!-- Cert 1: Udemy Ethical Hacking -->
+        <div class="cert-showcase-card glass-card" id="cert-udemy-eth"
+             data-cert-title="The Complete Ethical Hacking Course"
+             data-cert-issuer="Udemy"
+             data-cert-date="July 12, 2025"
+             data-cert-id="UC-d0e6bd85-714c-4054-b657-09b01f4346c5"
+             data-cert-url="https://ude.my/UC-d0e6bd85-714c-4054-b657-09b01f4346c5"
+             data-cert-hours="41.5 total hours"
+             data-cert-img="assets/certs/cert-udemy-eth.png">
+          <div class="cert-showcase-top">
+            <div class="cert-logo udemy-logo">
+              <i class="fas fa-graduation-cap"></i>
+              <span>udemy</span>
+            </div>
+            <div class="cert-view-btn"><i class="fas fa-expand-alt"></i></div>
+          </div>
+          <div class="cert-showcase-preview">
+            <div class="cert-preview-inner udemy-preview">
+              <div class="cert-preview-label">CERTIFICATE OF COMPLETION</div>
+              <div class="cert-preview-title">The Complete<br>Ethical Hacking<br>Course</div>
+              <div class="cert-preview-name">MOHAMMED AFFAN</div>
+            </div>
+          </div>
+          <div class="cert-showcase-footer">
+            <div class="cert-showcase-info">
+              <h4>The Complete Ethical Hacking Course</h4>
+              <span class="cert-meta-row">
+                <span class="cert-date"><i class="fas fa-calendar-alt"></i> July 12, 2025</span>
+                <span class="cert-hours"><i class="fas fa-clock"></i> 41.5 hrs</span>
+              </span>
+            </div>
+            <span class="cert-badge-pill verified"><i class="fas fa-check-circle"></i> Verified</span>
+          </div>
+        </div>
+
+        <!-- Cert 2: Cisco Networking Devices & Initial Configuration -->
+        <div class="cert-showcase-card glass-card" id="cert-cisco-netdev"
+             data-cert-title="Networking Devices and Initial Configuration"
+             data-cert-issuer="Cisco Networking Academy"
+             data-cert-date="24 May 2026"
+             data-cert-id="288da919-99e8-4e60-b53e-58747bb61acc"
+             data-cert-img="assets/certs/cert-cisco-netdev.png">
+          <div class="cert-showcase-top">
+            <div class="cert-logo cisco-logo">
+              <i class="fas fa-server"></i>
+              <span>Cisco NetAcad</span>
+            </div>
+            <div class="cert-view-btn"><i class="fas fa-expand-alt"></i></div>
+          </div>
+          <div class="cert-showcase-preview">
+            <div class="cert-preview-inner cisco-preview">
+              <div class="cert-preview-awarded">This certificate is awarded to</div>
+              <div class="cert-preview-name cisco-name">MOHAMMED AFFAN</div>
+              <div class="cert-preview-course">Networking Devices and<br>Initial Configuration</div>
+            </div>
+          </div>
+          <div class="cert-showcase-footer">
+            <div class="cert-showcase-info">
+              <h4>Networking Devices and Initial Configuration</h4>
+              <span class="cert-meta-row">
+                <span class="cert-date"><i class="fas fa-calendar-alt"></i> 24 May 2026</span>
+              </span>
+            </div>
+            <span class="cert-badge-pill verified"><i class="fas fa-check-circle"></i> Verified</span>
+          </div>
+        </div>
+
+        <!-- Cert 3: Cisco Networking Basics -->
+        <div class="cert-showcase-card glass-card" id="cert-cisco-netbasics"
+             data-cert-title="Networking Basics"
+             data-cert-issuer="Cisco Networking Academy"
+             data-cert-date="02 Mar 2026"
+             data-cert-img="assets/certs/cert-cisco-netbasics.png">
+          <div class="cert-showcase-top">
+            <div class="cert-logo cisco-logo">
+              <i class="fas fa-network-wired"></i>
+              <span>Cisco NetAcad</span>
+            </div>
+            <div class="cert-view-btn"><i class="fas fa-expand-alt"></i></div>
+          </div>
+          <div class="cert-showcase-preview">
+            <div class="cert-preview-inner cisco-preview">
+              <div class="cert-preview-awarded">This certificate is awarded to</div>
+              <div class="cert-preview-name cisco-name">MOHAMMED AFFAN</div>
+              <div class="cert-preview-course">Networking Basics</div>
+            </div>
+          </div>
+          <div class="cert-showcase-footer">
+            <div class="cert-showcase-info">
+              <h4>Networking Basics</h4>
+              <span class="cert-meta-row">
+                <span class="cert-date"><i class="fas fa-calendar-alt"></i> 02 Mar 2026</span>
+              </span>
+            </div>
+            <span class="cert-badge-pill verified"><i class="fas fa-check-circle"></i> Verified</span>
+          </div>
+        </div>
+
+        <!-- Cert 4: Cisco Introduction to Cybersecurity -->
+        <div class="cert-showcase-card glass-card" id="cert-cisco-cybersec"
+             data-cert-title="Introduction to Cybersecurity"
+             data-cert-issuer="Cisco Networking Academy"
+             data-cert-date="Jan 14, 2026"
+             data-cert-img="assets/certs/cert-cisco-cybersec.png">
+          <div class="cert-showcase-top">
+            <div class="cert-logo cisco-logo">
+              <i class="fas fa-shield-alt"></i>
+              <span>Cisco NetAcad</span>
+            </div>
+            <div class="cert-view-btn"><i class="fas fa-expand-alt"></i></div>
+          </div>
+          <div class="cert-showcase-preview">
+            <div class="cert-preview-inner cisco-cybersec-preview">
+              <div class="cert-preview-coc">Certificate of Course Completion</div>
+              <div class="cert-preview-name cisco-name-alt">MOHAMMED AFFAN</div>
+              <div class="cert-preview-course-sm">Introduction to Cybersecurity</div>
+            </div>
+          </div>
+          <div class="cert-showcase-footer">
+            <div class="cert-showcase-info">
+              <h4>Introduction to Cybersecurity</h4>
+              <span class="cert-meta-row">
+                <span class="cert-date"><i class="fas fa-calendar-alt"></i> Jan 14, 2026</span>
+              </span>
+            </div>
+            <span class="cert-badge-pill verified"><i class="fas fa-check-circle"></i> Verified</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Certificate Modal -->
+      <div class="cert-modal-overlay" id="certModal">
+        <div class="cert-modal-box">
+          <button class="cert-modal-close" id="certModalClose" aria-label="Close"><i class="fas fa-times"></i></button>
+          <div class="cert-modal-header">
+            <div class="cert-modal-meta">
+              <span class="cert-modal-issuer" id="modalIssuer"></span>
+              <h3 class="cert-modal-title" id="modalTitle"></h3>
+              <div class="cert-modal-details">
+                <span id="modalDate"></span>
+                <span id="modalHours" style="display:none"></span>
+                <span id="modalId" style="display:none"></span>
+              </div>
+            </div>
+            <div class="cert-modal-actions">
+              <a href="#" id="modalVerifyLink" target="_blank" class="btn btn-secondary btn-sm" style="display:none">
+                <i class="fas fa-external-link-alt"></i> Verify Online
+              </a>
+            </div>
+          </div>
+          <div class="cert-modal-img-wrapper">
+            <div class="cert-placeholder" id="certPlaceholder">
+              <div class="cert-placeholder-inner" id="certPlaceholderInner">
+                <!-- Dynamically rendered certificate preview -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Platforms / Labs -->
+      <div class="labs-section">
+        <h3 class="labs-title"><i class="fas fa-flask"></i> Hands-on Lab Platforms</h3>
+        <div class="labs-row">
+          <div class="lab-item" id="lab-htb"><i class="fas fa-cube"></i><span>Hack The Box</span></div>
+          <div class="lab-item" id="lab-thm"><i class="fas fa-shield-halved"></i><span>TryHackMe</span></div>
+          <div class="lab-item" id="lab-portswigger"><i class="fas fa-spider"></i><span>PortSwigger Academy</span></div>
+          <div class="lab-item" id="lab-overthewire"><i class="fas fa-terminal"></i><span>OverTheWire</span></div>
+          <div class="lab-item" id="lab-picoctf"><i class="fas fa-flag"></i><span>PicoCTF</span></div>
+          <div class="lab-item" id="lab-cisco"><i class="fas fa-server"></i><span>Cisco NetAcad</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ EXPERIENCE SECTION ═══════════ -->
+  <section id="experience" class="section exp-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 06</span>
+        <h2 class="section-title">Experience & <span class="accent">Achievements</span></h2>
+        <p class="section-subtitle">Practical skills & notable accomplishments</p>
+      </div>
+      <div class="exp-layout">
+        <div class="exp-col">
+          <h3 class="exp-col-title"><i class="fas fa-laptop-code"></i> Practical Experience</h3>
+          <div class="exp-list">
+            <div class="exp-item glass-card" id="exp1">
+              <div class="exp-dot"></div>
+              <div class="exp-content">
+                <h4>Web Penetration Testing</h4>
+                <p>Completed comprehensive web penetration testing labs covering OWASP Top 10 vulnerabilities on platforms like PortSwigger Academy and TryHackMe.</p>
+              </div>
+            </div>
+            <div class="exp-item glass-card" id="exp2">
+              <div class="exp-dot"></div>
+              <div class="exp-content">
+                <h4>Network Scanning & Enumeration</h4>
+                <p>Performed extensive network scanning and enumeration using Nmap across various CTF challenges and lab environments.</p>
+              </div>
+            </div>
+            <div class="exp-item glass-card" id="exp3">
+              <div class="exp-dot"></div>
+              <div class="exp-content">
+                <h4>Network Traffic Analysis</h4>
+                <p>Analyzed network traffic using Wireshark to identify attack patterns, malicious payloads, and anomalous behavior in packet captures.</p>
+              </div>
+            </div>
+            <div class="exp-item glass-card" id="exp4">
+              <div class="exp-dot"></div>
+              <div class="exp-content">
+                <h4>SQL Injection Research</h4>
+                <p>Practiced and researched SQL Injection attacks in legal, controlled lab environments to understand attack vectors and develop detection strategies.</p>
+              </div>
+            </div>
+            <div class="exp-item glass-card" id="exp5">
+              <div class="exp-dot"></div>
+              <div class="exp-content">
+                <h4>CTF Competitions</h4>
+                <p>Solved multiple CTF challenges across platforms including PicoCTF and Hack The Box, covering cryptography, web exploitation, and forensics.</p>
+              </div>
+            </div>
+            <div class="exp-item glass-card" id="exp6">
+              <div class="exp-dot"></div>
+              <div class="exp-content">
+                <h4>Security Project Development</h4>
+                <p>Built multiple Java-based security projects including the Trust Decay Calculator with Zero Trust principles and blockchain audit logging.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="exp-col">
+          <h3 class="exp-col-title"><i class="fas fa-trophy"></i> Achievements</h3>
+          <div class="achievements-grid">
+            <div class="achievement-card glass-card" id="ach1">
+              <div class="ach-icon"><i class="fas fa-cube"></i></div>
+              <div class="ach-text">
+                <h4>HTB Machine Solver</h4>
+                <p>Completed multiple Hack The Box machines</p>
+              </div>
+            </div>
+            <div class="achievement-card glass-card" id="ach2">
+              <div class="ach-icon"><i class="fas fa-certificate"></i></div>
+              <div class="ach-text">
+                <h4>Cisco Certified</h4>
+                <p>Completed Cisco Networking Academy courses</p>
+              </div>
+            </div>
+            <div class="achievement-card glass-card" id="ach3">
+              <div class="ach-icon"><i class="fas fa-users"></i></div>
+              <div class="ach-text">
+                <h4>Workshop Participant</h4>
+                <p>Participated in cybersecurity workshops & seminars</p>
+              </div>
+            </div>
+            <div class="achievement-card glass-card" id="ach4">
+              <div class="ach-icon"><i class="fas fa-code-branch"></i></div>
+              <div class="ach-text">
+                <h4>Project Builder</h4>
+                <p>Built multiple cybersecurity & software projects</p>
+              </div>
+            </div>
+            <div class="achievement-card glass-card" id="ach5">
+              <div class="ach-icon"><i class="fas fa-microchip"></i></div>
+              <div class="ach-text">
+                <h4>IEEE Member</h4>
+                <p>Active member of IEEE technical organization</p>
+              </div>
+            </div>
+            <div class="achievement-card glass-card" id="ach6">
+              <div class="ach-icon"><i class="fas fa-flag"></i></div>
+              <div class="ach-text">
+                <h4>CTF Player</h4>
+                <p>Solved challenges in PicoCTF & other competitions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTACT SECTION ═══════════ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// 07</span>
+        <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+        <p class="section-subtitle">Let's connect and build something great</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-info">
+          <div class="contact-card glass-card" id="contactCard">
+            <h3 class="contact-title">
+              <span class="terminal-prompt">$ contact --init</span>
+            </h3>
+            <p class="contact-desc">
+              I'm currently looking for internship opportunities and collaborations in the cybersecurity space. 
+              Whether you have a project idea, want to discuss security concepts, or just want to say hi — my inbox is open!
+            </p>
+            <div class="contact-details">
+              <a href="mailto:affanmohammedaffan0@gmail.com" class="contact-detail-item" id="contactEmail">
+                <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+                <div class="contact-detail-text">
+                  <span class="detail-label">Email</span>
+                  <span class="detail-value">affanmohammedaffan0@gmail.com</span>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/mohammedaffanjacyber" target="_blank" class="contact-detail-item" id="contactLinkedin">
+                <div class="contact-detail-icon linkedin"><i class="fab fa-linkedin"></i></div>
+                <div class="contact-detail-text">
+                  <span class="detail-label">LinkedIn</span>
+                  <span class="detail-value">mohammedaffanjacyber</span>
+                </div>
+              </a>
+              <a href="https://github.com/Mohammed-Affan-1" target="_blank" class="contact-detail-item" id="contactGithub">
+                <div class="contact-detail-icon github"><i class="fab fa-github"></i></div>
+                <div class="contact-detail-text">
+                  <span class="detail-label">GitHub</span>
+                  <span class="detail-value">Mohammed-Affan-1</span>
+                </div>
+              </a>
+            </div>
+            <a href="assets/resume.pdf" download class="btn btn-primary btn-full" id="downloadResumeContact">
+              <i class="fas fa-file-download"></i>
+              <span>Download Resume</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <form class="contact-form glass-card" id="contactForm">
+            <div class="form-group">
+              <label for="senderName">Your Name</label>
+              <div class="input-wrapper">
+                <i class="fas fa-user"></i>
+                <input type="text" id="senderName" name="name" placeholder="John Doe" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="senderEmail">Your Email</label>
+              <div class="input-wrapper">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="senderEmail" name="email" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="messageSubject">Subject</label>
+              <div class="input-wrapper">
+                <i class="fas fa-tag"></i>
+                <input type="text" id="messageSubject" name="subject" placeholder="Internship Opportunity" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="messageBody">Message</label>
+              <div class="input-wrapper textarea-wrapper">
+                <i class="fas fa-comment-alt"></i>
+                <textarea id="messageBody" name="message" rows="5" placeholder="Your message here..." required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitMessage">
+              <i class="fas fa-paper-plane"></i>
+              <span>Send Message</span>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="fas fa-check-circle"></i>
+              <span>Message sent! I'll get back to you soon.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="logo-bracket">[</span>
+        <span class="logo-text">AFFAN</span>
+        <span class="logo-bracket">]</span>
+      </div>
+      <p class="footer-copy">© 2026 Mohammed Affan JA • Built with HTML, CSS & JavaScript</p>
+      <div class="footer-socials">
+        <a href="https://github.com/Mohammed-Affan-1" target="_blank" class="social-link" id="footerGithub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mohammedaffanjacyber" target="_blank" class="social-link" id="footerLinkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:affanmohammedaffan0@gmail.com" class="social-link" id="footerEmail" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
